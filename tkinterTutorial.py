@@ -6,9 +6,10 @@ from tkinter import *
 root = Tk()
 
 # create a label widget
-## evertyhing is a widget!
-myLabel = Label(root, text="Software Testing QuizSoftware Testing QuizSoftware Testing QuizSoftwa\n re Testing QuizSoftware Testing QuizSoftware Testing QuizSoftware Testing Quiz")
-
+# Everything is a widget!
+myLabel = Label(root,
+                text="Software Testing QuizSoftware Testing QuizSoftware Testing QuizSoftwa\n re Testing QuizSoftware "
+                     "Testing QuizSoftware Testing QuizSoftware Testing Quiz")
 
 # there are 3 main geometry manager classes
 # 1. Pack
@@ -16,12 +17,10 @@ myLabel = Label(root, text="Software Testing QuizSoftware Testing QuizSoftware T
 # 3. Place
 
 
-
 myLabel.pack()
 
 # mainloop is used to run the application
 # waits for events
 # processes the event when they occur
-#... as long as the window is not closed of course
+# ... as long as the window is not closed of course
 root.mainloop()
-
