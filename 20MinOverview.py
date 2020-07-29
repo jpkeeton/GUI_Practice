@@ -17,7 +17,7 @@ def click():
 
 # Create the window
 window = Tk()
-window.geometry("800x800")
+window.geometry("500x500")
 # Add a window title
 window.title("Software Testing Glossary Test")
 

@@ -10,9 +10,10 @@ window.geometry("600x400")
 
 # Creates the size of the window
 
-window.title("Software Testing Quiz")
+window.title('antherTkinterTry.py')
 # Adds a title to the Windows GUI for the window
 
+# greeting won't show up cuz i've not placed it, only created it here...
 greeting = tk.Label(text="Hello, Tkinter")
 
 window.mainloop()

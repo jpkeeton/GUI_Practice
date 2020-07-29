@@ -39,13 +39,14 @@ import PySimpleGUI as sg
 # <>>
 import PySimpleGUI as sg
 
-choices = ('Red', 'Green', 'Blue', 'Yellow', 'Orange', 'Purple', 'Chartreuse')
+choices = ('Software Problem', 'Food Opportunity!', 'A Feature')
 
-layout = [[sg.Text('What is your favorite color?')],
+# layout = [  [sg.Text('What is your favorite color?')],
+layout = [[sg.Text('What is a bug?')],
           [sg.Listbox(choices, size=(15, len(choices)), key='-COLOR-')],
           [sg.Button('Ok')]]
 
-window = sg.Window('Pick a color', layout)
+window = sg.Window('Choose your answer wisely', layout)
 
 while True:  # the event loop
     event, values = window.read()
@@ -53,5 +54,5 @@ while True:  # the event loop
         break
     if event == 'Ok':
         if values['-COLOR-']:  # if something is highlighted in the list
-            sg.popup(f"Your favorite color is {values['-COLOR-'][0]}")
+            sg.popup(f"You chose {values['-COLOR-'][0]}")
 window.close()
