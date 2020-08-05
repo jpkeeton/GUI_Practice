@@ -39,20 +39,27 @@ import PySimpleGUI as sg
 # <>>
 import PySimpleGUI as sg
 
+# create a tuple of choices
 choices = ('Software Problem', 'Food Opportunity!', 'A Feature')
 
+# here is a layout definition
 # layout = [  [sg.Text('What is your favorite color?')],
+# create a layout
 layout = [[sg.Text('What is a bug?')],
-          [sg.Listbox(choices, size=(15, len(choices)), key='-COLOR-')],
-          [sg.Button('Ok')]]
+          [sg.Listbox(choices, size=(29, len(choices)), key='-COLOR-')],
+          [sg.Button('This is button')]]
 
-window = sg.Window('Choose your answer wisely', layout)
+# Create a window
+# window = sg.Window('Choose your answer wisely', layout)
+window2= sg.Window('this is the 2nd window', layout)
 
+# so this looks like the mainloop from tkinter
 while True:  # the event loop
-    event, values = window.read()
+    event, values = window2.read()
     if event == sg.WIN_CLOSED:
         break
     if event == 'Ok':
         if values['-COLOR-']:  # if something is highlighted in the list
             sg.popup(f"You chose {values['-COLOR-'][0]}")
-window.close()
+
+window2.close()
